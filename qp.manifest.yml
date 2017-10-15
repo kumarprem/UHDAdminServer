@@ -1,0 +1,8 @@
+---
+inherit: manifest_base.yml
+applications:
+- name: uhd-admin-qp
+  host: uhd-admin-qp
+  instances: 1
+  env:
+    SPRING_PROFILES_ACTIVE: qp,cloud

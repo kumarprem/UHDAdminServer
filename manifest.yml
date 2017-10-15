@@ -1,0 +1,10 @@
+--- 
+applications: 
+  - 
+    buildpack: java_buildpack_offline
+    memory: 1024M
+    name: st-uhd-boot-admin
+    host: st-uhd-boot-admin
+    path: ./build/libs/UHDAdminServer-0.0.1.jar
+    instances: 1
+

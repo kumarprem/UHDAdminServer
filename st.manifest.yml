@@ -1,0 +1,8 @@
+---
+inherit: manifest_base.yml
+applications:
+- name: uhd-admin-st
+  host: uhd-admin-st
+  instances: 1
+  env:
+    SPRING_PROFILES_ACTIVE: st,cloud

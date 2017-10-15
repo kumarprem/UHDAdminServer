@@ -1,0 +1,39 @@
+spring:
+  application:
+    name: uhd-spring-admin
+  mail:
+    host: mail1.homedepot.com
+  boot:
+    admin:
+      monitor:
+        read-timeout: 5000
+        connect-timeout: 5000
+      notify:
+        slack:
+          enabled: false
+          webhook-url: "https://hooks.slack.com/services/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"
+          ignore-changes:
+        mail:
+          enabled: false
+          to: prem_kumar@homedepot.com,ANURAG_KOMARAVELLI@homedepot.com
+          from: uhdtest@homedepot.com
+          ignore-changes:
+server:
+  port: ${vcap.application.port:8085}
+
+eureka:
+  instance:
+    leaseRenewalIntervalInSeconds: 10
+    hostname: ${vcap.application.uris:localhost}
+    nonSecurePort: 80
+  client:
+    registryFetchIntervalSeconds: 5
+    registerWithEureka: false
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://uhd-eureka-st.apps-np.homedepot.com/eureka/
+
+management:
+  security:
+    enabled: false
+

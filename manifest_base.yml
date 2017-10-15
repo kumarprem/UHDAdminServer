@@ -1,0 +1,5 @@
+---
+path: UHDAdminServer.jar
+memory: 512M
+timeout: 180
+buildpack: https://github.com/cloudfoundry/java-buildpack.git#v3.10

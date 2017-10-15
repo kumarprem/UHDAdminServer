@@ -1,0 +1,8 @@
+---
+inherit: manifest_base.yml
+applications:
+- name: uhd-admin-qa
+  host: uhd-admin-qa
+  instances: 1
+  env:
+    SPRING_PROFILES_ACTIVE: qa,cloud

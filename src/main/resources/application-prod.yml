@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: uhd-spring-admin
+  mail:
+    host: mail1.homedepot.com
+  boot:
+    admin:
+      monitor:
+        read-timeout: 5000
+        connect-timeout: 5000
+      notify:
+        slack:
+          enabled: true
+          webhook-url: "https://hooks.slack.com/services/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"
+          ignore-changes:
+        mail:
+          enabled: true
+          to: DF_Home_Delivery_App_Support@homedepot.com
+          from: uhd_alerts@homedepot.com
+          ignore-changes:
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://uhd-eureka.apps.homedepot.com/eureka/
+    registerWithEureka: true
+    fetchRegistry: true
