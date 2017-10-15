@@ -1,0 +1,25 @@
+server:
+  port: 8050
+spring:
+  datasource:
+    initialize: false
+  application:
+    name: homedelivery-custtrack
+
+eureka:
+  instance:
+    hostname: ${vcap.application.uris:localhost}
+    nonSecurePort: 80
+  client:
+    serviceUrl:
+      defaultZone: http://uhd-eureka.apps.homedepot.com/eureka/
+    registerWithEureka: true
+    fetchRegistry: true
+hystrix:
+  command:
+   default:
+     execution:
+       timeout:
+         enabled: false
+     circuitBreaker:
+       enabled: false
